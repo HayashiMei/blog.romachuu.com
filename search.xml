@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Github Page、バイバイ〜]]></title>
+    <url>%2F2018%2F05%2F28%2Fgithub-page-bye-bye%2F</url>
+    <content type="text"><![CDATA[…最终，还是把网站从 Github Page 搬回了自己的 Google Cloud 。虽然很方便，但是在没有代理的情况下，国内访问 Github Page 还是太慢了。 搬家过程中，通过使用 PageSpeed Insights 学习了一些前端优化的知识，了解了一下怎么配置 gzip 和缓存，也算是有点收获。 今天就记录一下网站搬家的事，不然只有一篇碎碎念说“用 Github Page 开博客啦”感觉怪怪的。 それでは、今日も一日頑張るぞい！]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GitHub Pageでブログを始めたいと思います！(何回目？)]]></title>
+    <url>%2F2018%2F05%2F15%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[…っといっても、何を書くか全然分かんないね。んむむ…多分JSとか何とかの勉強日記（？）みたいな（？）物をここに書くかな。まぁ、具体的なものは後に置いとこう！ それでは、今日も一日頑張るぞい！]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
+  </entry>
+</search>
