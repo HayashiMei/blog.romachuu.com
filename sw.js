@@ -7,7 +7,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "css/main.css",
-    "revision": "670f4f8bde85b75c976c00177e39e22c"
+    "revision": "053246785b42e6eac04d27afe60e7e82"
   },
   {
     "url": "images/aki-megane.png",
