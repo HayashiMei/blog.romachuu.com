@@ -9,7 +9,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "css/main.css",
-    "revision": "58f72c1d96c425ad21c4f8b4a771498f"
+    "revision": "8aac372710ac5b165055292d7deba679"
   },
   {
     "url": "images/aki-megane.png",
@@ -190,30 +190,6 @@ if (workbox) {
   {
     "url": "js/src/scrollspy.js",
     "revision": "fafdd7ab6af233b701506c733910b7f5"
-  },
-  {
-    "url": "lib/font-awesome/css/font-awesome.min.css",
-    "revision": "269550530cc127b6aa5a35925a7de6ce"
-  },
-  {
-    "url": "lib/jquery/index.js",
-    "revision": "32015dd42e9582a80a84736f5d9a44d7"
-  },
-  {
-    "url": "lib/ua-parser-js/dist/ua-parser.min.js",
-    "revision": "a6e833266c4b41fabb9ba94a145322d8"
-  },
-  {
-    "url": "lib/ua-parser-js/dist/ua-parser.pack.js",
-    "revision": "6b627e4d61a7135952824bb9c1a4a134"
-  },
-  {
-    "url": "lib/velocity/velocity.min.js",
-    "revision": "c1b8d079c7049879838d78e0b389965e"
-  },
-  {
-    "url": "lib/velocity/velocity.ui.min.js",
-    "revision": "444faf512fb24d50a5dec747cbbe39bd"
   },
   {
     "url": "index.html",
