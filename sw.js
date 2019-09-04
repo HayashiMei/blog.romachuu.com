@@ -9,7 +9,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "css/main.css",
-    "revision": "55f1eb48d41ba649133627170a723f59"
+    "revision": "f2a0226bb89ec3a3baed680b40f0b82f"
   },
   {
     "url": "images/aki-megane.png",
@@ -200,7 +200,7 @@ if (workbox) {
   const cacheVersion = 'v20190904';
 
   workbox.routing.registerRoute(
-    /\/(.*)\.html$/,
+    /(\/|(.*)(\.html|\/))$/,
     new workbox.strategies.NetworkFirst({
       cacheName: `html-${cacheVersion}`,
       plugins: [
