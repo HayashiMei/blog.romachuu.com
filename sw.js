@@ -37,7 +37,7 @@ if (workbox) {
   },
   {
     "url": "css/main.css",
-    "revision": "0e24852272345c31ad18353d99593451"
+    "revision": "5f165aeed826a2888e7db56d422362c2"
   },
   {
     "url": "images/aki-megane.png",
@@ -309,7 +309,7 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     /\/(.*)\.html$/,
-    new workbox.strategies.networkFirst({
+    new workbox.strategies.NetworkFirst({
       cacheName: `html-${cacheVersion}`,
       plugins: [
         new workbox.expiration.Plugin({
