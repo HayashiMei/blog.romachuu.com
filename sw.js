@@ -1,97 +1,57 @@
-'use strict';
-(function() {
-  var cacheVersion = '20180613';
-  var staticImageCacheName = 'image' + cacheVersion;
-  var staticAssetsCacheName = 'assets' + cacheVersion;
-  var contentCacheName = 'content' + cacheVersion;
-  var vendorCacheName = 'vendor' + cacheVersion;
-  var maxEntries = 100;
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
-  self.importScripts('lib/sw-toolbox/sw-toolbox.js');
-  self.toolbox.options.debug = false;
-  self.toolbox.options.networkTimeoutSeconds = 3;
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+} else {
+  return console.log(`Boo! Workbox didn't load 😬`);
+}
 
-  self.toolbox.router.get('/images/(.*)', self.toolbox.cacheFirst, {
-    cache: {
-      name: staticImageCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+workbox.precaching.precacheAndRoute([]);
 
-  self.toolbox.router.get('/js/(.*)', self.toolbox.cacheFirst, {
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+const cacheVersion = 'v20190904';
 
-  self.toolbox.router.get('/css/(.*)', self.toolbox.cacheFirst, {
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+workbox.setConfig({ debug: false });
+workbox.core.setCacheNameDetails({
+  prefix: 'blog.romachuu.com',
+  suffix: 'v20190904',
+});
 
-  self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-    origin: /cdn\.jsdelivr\.net/,
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+workbox.routing.registerRoute(
+  /\/css\/(.*)$/,
+  new workbox.strategies.CacheFirst({
+    cacheName: `css-${cacheVersion}`,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 50,
+      }),
+    ],
+  })
+);
 
-  self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-    origin: /cdnjs\.loli\.net/,
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+workbox.routing.registerRoute(
+  /\/js\/(.*)$/,
+  new workbox.strategies.CacheFirst({
+    cacheName: `js-${cacheVersion}`,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 50,
+      }),
+    ],
+  })
+);
 
-  self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-    origin: /fonts\.loli\.net/,
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+workbox.routing.registerRoute(
+  /\/images\/(.*)$/,
+  new workbox.strategies.CacheFirst({
+    cacheName: `images-${cacheVersion}`,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 50,
+      }),
+    ],
+  })
+);
 
-  self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-    origin: /gstatic\.loli\.net/,
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
+workbox.routing.registerRoute(/(cdn\.jsdelivr\.net|.*\.loli\.net|cdn\.bootcss\.com|(www|ssl)\.google-analytics\.com)\/(.*)$/, new workbox.strategies.StaleWhileRevalidate());
 
-  self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-    origin: /cdn\.bootcss\.com/,
-    cache: {
-      name: staticAssetsCacheName,
-      maxEntries: maxEntries,
-    },
-  });
-
-  self.toolbox.router.get('/(.*)', self.toolbox.networkOnly, {
-    origin: /(www\.google-analytics\.com|ssl\.google-analytics\.com)/,
-    cache: {
-      name: vendorCacheName,
-      maxEntries: maxEntries,
-    },
-  });
-
-  self.toolbox.router.get('/*', self.toolbox.networkFirst, {
-    cache: {
-      name: contentCacheName,
-      maxEntries: maxEntries,
-    },
-  });
-
-  self.addEventListener('install', function(event) {
-    return event.waitUntil(self.skipWaiting());
-  });
-
-  self.addEventListener('activate', function(event) {
-    return event.waitUntil(self.clients.claim());
-  });
-})();
+workbox.routing.registerRoute(/\/*$/, new workbox.strategies.NetworkFirst());
