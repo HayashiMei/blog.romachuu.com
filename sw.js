@@ -37,7 +37,7 @@ if (workbox) {
   },
   {
     "url": "css/main.css",
-    "revision": "5f165aeed826a2888e7db56d422362c2"
+    "revision": "1792d24ad319c6e11620764cb76af648"
   },
   {
     "url": "images/aki-megane.png",
@@ -282,10 +282,6 @@ if (workbox) {
   {
     "url": "manifest.json",
     "revision": "b1d22c57e5efcaff19c0c3b38aab7d6f"
-  },
-  {
-    "url": "README.md",
-    "revision": "ba0141cf03dd39c3421867806679b123"
   },
   {
     "url": "search.xml",
