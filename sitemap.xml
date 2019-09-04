@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://blog.romachuu.com/manifest.json</loc>
+    
+    <lastmod>2018-06-13T13:38:40.612Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.romachuu.com/tags/index.html</loc>
+    
+    <lastmod>2018-05-29T01:51:57.589Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.romachuu.com/categories/index.html</loc>
+    
+    <lastmod>2018-05-29T01:51:52.262Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.romachuu.com/2018/05/28/github-page-bye-bye/</loc>
+    
+    <lastmod>2018-05-28T07:26:10.026Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.romachuu.com/2018/05/15/hello-world/</loc>
+    
+    <lastmod>2018-05-16T17:15:30.505Z</lastmod>
+    
+  </url>
+  
+</urlset>
