@@ -8,36 +8,8 @@ if (workbox) {
   workbox.googleAnalytics.initialize();
   workbox.precaching.precacheAndRoute([
   {
-    "url": "2018/05/15/hello-world/index.html",
-    "revision": "e7f84d0fed49682e5116dc58cce25e93"
-  },
-  {
-    "url": "2018/05/28/github-page-bye-bye/index.html",
-    "revision": "147b319a4c0d2f2f56224137406af185"
-  },
-  {
-    "url": "archives/2018/05/index.html",
-    "revision": "1759d5918827221c547dc62db86f2304"
-  },
-  {
-    "url": "archives/2018/index.html",
-    "revision": "e9df04759c8cc4a0f89bc35fb7e575bd"
-  },
-  {
-    "url": "archives/index.html",
-    "revision": "c4d1b82ddaba35711698b08d81ac1a12"
-  },
-  {
-    "url": "categories/Diary/index.html",
-    "revision": "394d894520a2c6aa4d5891ff2a2edbb0"
-  },
-  {
-    "url": "categories/index.html",
-    "revision": "fe81e856d750826190d7781e43d79943"
-  },
-  {
     "url": "css/main.css",
-    "revision": "c754d668afbc222800036319fa71f6f0"
+    "revision": "55f1eb48d41ba649133627170a723f59"
   },
   {
     "url": "images/aki-megane.png",
@@ -192,10 +164,6 @@ if (workbox) {
     "revision": "dbaf69c9fceac3ed5106f613dd012077"
   },
   {
-    "url": "index.html",
-    "revision": "282a089370cac71a1b3a7b14fe30cd91"
-  },
-  {
     "url": "js/megumi.min.js",
     "revision": "5ff77552671f4038aa598ceb0878d56c"
   },
@@ -224,80 +192,8 @@ if (workbox) {
     "revision": "fafdd7ab6af233b701506c733910b7f5"
   },
   {
-    "url": "lib/font-awesome/bower.json",
-    "revision": "188dd1a7583ffab4da32757242993f36"
-  },
-  {
-    "url": "lib/font-awesome/css/font-awesome.css",
-    "revision": "c495654869785bc3df60216616814ad1"
-  },
-  {
-    "url": "lib/font-awesome/css/font-awesome.min.css",
-    "revision": "269550530cc127b6aa5a35925a7de6ce"
-  },
-  {
-    "url": "lib/font-awesome/fonts/fontawesome-webfont.eot",
-    "revision": "674f50d287a8c48dc19ba404d20fe713"
-  },
-  {
-    "url": "lib/font-awesome/fonts/fontawesome-webfont.woff",
-    "revision": "fee66e712a8a08eef5805a46892932ad"
-  },
-  {
-    "url": "lib/font-awesome/fonts/fontawesome-webfont.woff2",
-    "revision": "af7ae505a9eed503f8b8e6982036873e"
-  },
-  {
-    "url": "lib/font-awesome/HELP-US-OUT.txt",
-    "revision": "a1e5be58e81e919ba2e579cd1c65283e"
-  },
-  {
-    "url": "lib/jquery/index.js",
-    "revision": "32015dd42e9582a80a84736f5d9a44d7"
-  },
-  {
-    "url": "lib/ua-parser-js/dist/ua-parser.min.js",
-    "revision": "a6e833266c4b41fabb9ba94a145322d8"
-  },
-  {
-    "url": "lib/ua-parser-js/dist/ua-parser.pack.js",
-    "revision": "6b627e4d61a7135952824bb9c1a4a134"
-  },
-  {
-    "url": "lib/velocity/velocity.js",
-    "revision": "0361fa6dcf4cf4d19c593cdab0937dd0"
-  },
-  {
-    "url": "lib/velocity/velocity.min.js",
-    "revision": "c1b8d079c7049879838d78e0b389965e"
-  },
-  {
-    "url": "lib/velocity/velocity.ui.js",
-    "revision": "f55d22cc592c9f8d4ffd3b41a6b90081"
-  },
-  {
-    "url": "lib/velocity/velocity.ui.min.js",
-    "revision": "444faf512fb24d50a5dec747cbbe39bd"
-  },
-  {
-    "url": "manifest.json",
-    "revision": "b1d22c57e5efcaff19c0c3b38aab7d6f"
-  },
-  {
-    "url": "search.xml",
-    "revision": "674f43082a4dfb056e893f2ed0b837e9"
-  },
-  {
-    "url": "sitemap.xml",
-    "revision": "d557e8887f26af0081d6c8b25ea72503"
-  },
-  {
-    "url": "tags/Diary/index.html",
-    "revision": "c0e8744f2fb793f26f93dd19bdae7a71"
-  },
-  {
-    "url": "tags/index.html",
-    "revision": "fbce5d08cd148a93e5febefba83f64b3"
+    "url": "index.html",
+    "revision": "282a089370cac71a1b3a7b14fe30cd91"
   }
 ]);
 
