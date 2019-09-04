@@ -7,7 +7,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "css/main.css",
-    "revision": "053246785b42e6eac04d27afe60e7e82"
+    "revision": "be924f0336682fcbcb879ece6b26eb7f"
   },
   {
     "url": "images/aki-megane.png",
@@ -163,7 +163,7 @@ if (workbox) {
   },
   {
     "url": "js/megumi.min.js",
-    "revision": "5ff77552671f4038aa598ceb0878d56c"
+    "revision": "eddf9152ac282fa08318da56f7a29764"
   },
   {
     "url": "js/src/algolia-search.js",
@@ -191,7 +191,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "3074e588462ca7791905ad69d126b8f9"
+    "revision": "d12391e38d3b4d96875d82777c73a553"
   }
 ]);
 
