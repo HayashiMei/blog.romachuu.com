@@ -1,15 +1,13 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 if (workbox) {
-  console.log(`Yay! Workbox is loaded 🎉`);
-
   workbox.setConfig({ debug: false });
 
   workbox.googleAnalytics.initialize();
   workbox.precaching.precacheAndRoute([
   {
     "url": "css/main.css",
-    "revision": "8aac372710ac5b165055292d7deba679"
+    "revision": "670f4f8bde85b75c976c00177e39e22c"
   },
   {
     "url": "images/aki-megane.png",
@@ -193,7 +191,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "282a089370cac71a1b3a7b14fe30cd91"
+    "revision": "3074e588462ca7791905ad69d126b8f9"
   }
 ]);
 
@@ -248,6 +246,4 @@ if (workbox) {
   );
 
   workbox.routing.registerRoute(/(cdn\.jsdelivr\.net|.*\.loli\.net|cdn\.bootcss\.com)\/(.*)$/, new workbox.strategies.StaleWhileRevalidate());
-} else {
-  console.log(`Boo! Workbox didn't load 😬`);
 }
