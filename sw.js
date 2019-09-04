@@ -37,7 +37,7 @@ if (workbox) {
   },
   {
     "url": "css/main.css",
-    "revision": "1792d24ad319c6e11620764cb76af648"
+    "revision": "c754d668afbc222800036319fa71f6f0"
   },
   {
     "url": "images/aki-megane.png",
