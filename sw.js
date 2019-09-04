@@ -9,35 +9,35 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "2018/05/15/hello-world/index.html",
-    "revision": "3a523ba5a6ec07f18d3071356668b22d"
+    "revision": "e7f84d0fed49682e5116dc58cce25e93"
   },
   {
     "url": "2018/05/28/github-page-bye-bye/index.html",
-    "revision": "c8ce5f9e6213403e45f7d3e1f53ad334"
+    "revision": "147b319a4c0d2f2f56224137406af185"
   },
   {
     "url": "archives/2018/05/index.html",
-    "revision": "1c753937adeb12583368340451c9f68d"
+    "revision": "1759d5918827221c547dc62db86f2304"
   },
   {
     "url": "archives/2018/index.html",
-    "revision": "72a455e8c126d82d4b28098e69c204ee"
+    "revision": "e9df04759c8cc4a0f89bc35fb7e575bd"
   },
   {
     "url": "archives/index.html",
-    "revision": "f033b959d6090722dff80cd930bb9e7f"
+    "revision": "c4d1b82ddaba35711698b08d81ac1a12"
   },
   {
     "url": "categories/Diary/index.html",
-    "revision": "d233e7a8610cc4f708400c234fce3baf"
+    "revision": "394d894520a2c6aa4d5891ff2a2edbb0"
   },
   {
     "url": "categories/index.html",
-    "revision": "c416ddbdb40d0c013dd1b6976785ad3b"
+    "revision": "fe81e856d750826190d7781e43d79943"
   },
   {
     "url": "css/main.css",
-    "revision": "48b98db3fcb11b09bb63e891ac5b67e4"
+    "revision": "0e24852272345c31ad18353d99593451"
   },
   {
     "url": "images/aki-megane.png",
@@ -193,7 +193,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "76a6635c823b28c5a501a12bc16077db"
+    "revision": "282a089370cac71a1b3a7b14fe30cd91"
   },
   {
     "url": "js/megumi.min.js",
@@ -297,15 +297,27 @@ if (workbox) {
   },
   {
     "url": "tags/Diary/index.html",
-    "revision": "3b6b79ec4689a064b94d71f3f7b497e3"
+    "revision": "c0e8744f2fb793f26f93dd19bdae7a71"
   },
   {
     "url": "tags/index.html",
-    "revision": "ef0518b074111b7a3c4ec13fa9d9e5e8"
+    "revision": "fbce5d08cd148a93e5febefba83f64b3"
   }
 ]);
 
   const cacheVersion = 'v20190904';
+
+  workbox.routing.registerRoute(
+    /\/(.*)\.html$/,
+    new workbox.strategies.networkFirst({
+      cacheName: `html-${cacheVersion}`,
+      plugins: [
+        new workbox.expiration.Plugin({
+          maxEntries: 100,
+        }),
+      ],
+    })
+  );
 
   workbox.routing.registerRoute(
     /\/css\/(.*)$/,
@@ -313,7 +325,7 @@ if (workbox) {
       cacheName: `css-${cacheVersion}`,
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 50,
+          maxEntries: 100,
         }),
       ],
     })
@@ -325,7 +337,7 @@ if (workbox) {
       cacheName: `js-${cacheVersion}`,
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 50,
+          maxEntries: 100,
         }),
       ],
     })
@@ -337,7 +349,7 @@ if (workbox) {
       cacheName: `images-${cacheVersion}`,
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 50,
+          maxEntries: 100,
         }),
       ],
     })
