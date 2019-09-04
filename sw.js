@@ -35,7 +35,7 @@ if (workbox) {
   },
   {
     "url": "css/main.css",
-    "revision": "0ee84bdaaaca00aea29b4a19f18f3568"
+    "revision": "a5efa219b3912c8ea41201971bd4dfc2"
   },
   {
     "url": "images/aki-megane.png",
@@ -345,5 +345,5 @@ if (workbox) {
 
   workbox.routing.registerRoute(/(cdn\.jsdelivr\.net|.*\.loli\.net|cdn\.bootcss\.com)\/(.*)$/, new workbox.strategies.StaleWhileRevalidate());
 } else {
-  return console.log(`Boo! Workbox didn't load 😬`);
+  console.log(`Boo! Workbox didn't load 😬`);
 }
