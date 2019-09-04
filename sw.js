@@ -3,6 +3,8 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
 
+  workbox.setConfig({ debug: false });
+
   workbox.googleAnalytics.initialize();
   workbox.precaching.precacheAndRoute([
   {
@@ -35,7 +37,7 @@ if (workbox) {
   },
   {
     "url": "css/main.css",
-    "revision": "a5efa219b3912c8ea41201971bd4dfc2"
+    "revision": "48b98db3fcb11b09bb63e891ac5b67e4"
   },
   {
     "url": "images/aki-megane.png",
@@ -304,8 +306,6 @@ if (workbox) {
 ]);
 
   const cacheVersion = 'v20190904';
-
-  workbox.setConfig({ debug: false });
 
   workbox.routing.registerRoute(
     /\/css\/(.*)$/,
